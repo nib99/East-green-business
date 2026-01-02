@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>East Green Business - Your Trusted Business Partner in Ethiopia</title>
-  <meta name="description" content="East Green Business - Professional business services in Finfinnee, Ethiopia. Contact Manager AMIYYE ABDURAHIM at +251921153335">
+  <meta name="description" content="East Green Business - Professional business services in Addis Ababa, Ethiopia. Contact Manager AMIYYE ABDURAHIM at +251921153335">
   <meta name="keywords" content="East Green Business, Ethiopia business, Addis Ababa, Merkato, business services, Jimmaa, Harargee">
   <script src="/_sdk/data_sdk.js"></script>
   <script src="/_sdk/element_sdk.js"></script>
@@ -387,7 +387,7 @@
             display: flex;
             align-items: center;
             gap: 3rem;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             border: 3px solid #f59e0b;
             box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
         }
@@ -395,6 +395,7 @@
         .manager-avatar {
             width: 150px;
             height: 150px;
+            min-width: 150px;
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
             border-radius: 50%;
             display: flex;
@@ -404,6 +405,7 @@
             color: white;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
             border: 5px solid #ffffff;
+            flex-shrink: 0;
         }
         
         .manager-info {
@@ -831,11 +833,8 @@
    </header>
    <section class="hero" id="home">
     <div class="hero-content">
-     <h2 data-i18n="hero_title">Welcome to East Green Business Group</h2>
-
-
-     
-     <p data-i18n="hero_subtitle"></p>
+     <h2 data-i18n="hero_title">Welcome to East Green Business</h2>
+     <p data-i18n="hero_subtitle">Professional business services in Addis Ababa, Ethiopia 🇪🇹</p>
     </div>
    </section>
    <section class="section" id="services">
@@ -878,7 +877,7 @@
      <h2 class="section-title" data-i18n="about_title">Meet Our Manager</h2>
      <div class="manager-section">
       <div class="manager-avatar">
-       👨‍💼
+       ���‍💼
       </div>
       <div class="manager-info">
        <h3 id="manager-name">AMIYYE ABDURAHIM</h3>
@@ -1017,7 +1016,7 @@
                 services_title: "አገልግሎቶቻችን",
                 service1_title: "የንግድ አማካሪነት",
                 service1_desc: "ለንግድዎ እድገት እና ልማት ባለሙያ መመሪያ",
-                service2_title: "የአጋርነት መፍትሄዎች",
+                service2_title: "የአጋርነት መፍት�����ዎች",
                 service2_desc: "በመላ ኢትዮጵያ ጠንካራ የንግድ ግንኙነቶችን መገንባት",
                 service3_title: "የገበያ ትንተና",
                 service3_desc: "ጥልቅ የገበያ ምርምር እና ስትራቴጂ��ዊ እቅድ",
@@ -1163,6 +1162,7 @@
             const langOptions = document.querySelectorAll('.lang-option');
             
             langToggle.addEventListener('click', (e) => {
+                e.preventDefault();
                 e.stopPropagation();
                 langDropdown.classList.toggle('active');
             });
@@ -1174,7 +1174,9 @@
             });
             
             langOptions.forEach(option => {
-                option.addEventListener('click', () => {
+                option.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
                     const lang = option.dataset.lang;
                     const langName = option.dataset.name;
                     updateLanguage(lang);
@@ -1279,5 +1281,5 @@
 
         initializeApp();
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b7d02f2a7a41b5a',t:'MTc2NzM4NTc5Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b7d25d6b4a08a61',t:'MTc2NzM4NzIyNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
