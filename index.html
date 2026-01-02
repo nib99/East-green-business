@@ -57,18 +57,41 @@
             gap: 1.5rem;
         }
         
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-image {
+            height: 60px;
+            width: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            object-fit: contain;
+            background: white;
+            padding: 0.25rem;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
         .logo-section h1 {
             color: #ffffff;
             font-size: 1.75rem;
             font-weight: 800;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
             letter-spacing: 0.5px;
+            margin: 0;
         }
         
         .logo-section p {
             color: #f0fdf4;
             font-size: 0.95rem;
             font-weight: 600;
+            margin: 0;
         }
         
         .nav-controls {
@@ -184,9 +207,16 @@
             padding: 6rem 2rem;
             text-align: center;
             color: white;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 30%, #7e22ce 70%, #9333ea 100%);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('logo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             position: relative;
             overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .hero::before {
@@ -196,20 +226,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
-            animation: float 20s infinite linear;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-100px); }
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 0;
         }
         
         .hero-content {
             max-width: 900px;
             margin: 0 auto;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         
         .hero h2 {
@@ -605,6 +630,11 @@
                 gap: 1rem;
             }
             
+            .logo-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
             .logo-section h1 {
                 font-size: 1.5rem;
             }
@@ -630,6 +660,8 @@
             
             .hero {
                 padding: 3rem 1.5rem;
+                background-attachment: scroll;
+                min-height: 500px;
             }
             
             .hero h2 {
@@ -766,9 +798,11 @@
   <div class="main-wrapper">
    <header class="header">
     <div class="header-content">
-     <div class="logo-section">
-      <h1 id="site-title">🌿 East Green Business</h1>
-      <p id="tagline">Your Trusted Business Partner</p>
+     <div class="logo-section"><img src="logo.jpg" alt="East Green Business Logo" class="logo-image" onerror="this.style.display='none';">
+      <div class="logo-text">
+       <h1 id="site-title">🌿 East Green Business</h1>
+       <p id="tagline">Your Trusted Business Partner</p>
+      </div>
      </div>
      <div class="nav-controls">
       <div class="lang-switcher"><button class="lang-btn" id="lang-toggle"> 🌐 <span id="current-lang">English</span> ▼ </button>
@@ -973,10 +1007,10 @@
             am: {
                 nav_home: "መነሻ",
                 nav_services: "አገልግሎቶች",
-                nav_about: "ስለእኛ",
+                nav_about: "ስለእ���",
                 nav_contact: "ያግኙን",
                 hero_title: "ወደ ኢስት ግሪን ቢዝነስ እንኳን በደህና መጡ",
-                hero_subtitle: "በአዲስ አበ���፣ ኢትዮጵያ ውስጥ ሙያዊ የንግድ አገልግሎቶች 🇪🇹",
+                hero_subtitle: "በአዲስ አበባ፣ ኢትዮጵያ ውስጥ ሙያዊ የንግድ አገልግሎቶች 🇪🇹",
                 cta_contact: "ያግኙን",
                 cta_services: "አገልግሎቶቻችን",
                 services_title: "አገልግሎቶቻችን",
@@ -985,7 +1019,7 @@
                 service2_title: "የአጋርነት መፍትሄዎች",
                 service2_desc: "በመላ ኢትዮጵያ ጠንካራ የንግድ ግንኙነቶችን መገንባት",
                 service3_title: "የገበያ ትንተና",
-                service3_desc: "ጥልቅ የገበያ ምርምር እና ስትራቴጂካዊ እቅድ",
+                service3_desc: "ጥልቅ የገበያ ምር���ር እና ስት���ቴጂካዊ እቅድ",
                 service4_title: "ዘላቂ እድገት",
                 service4_desc: "ለረጅም ጊዜ ስኬት ለአካባቢ ተስማሚ የንግድ መፍትሄዎች",
                 about_title: "አስተዳዳሪያችንን ያግኙ",
@@ -999,12 +1033,12 @@
                 form_name: "ስም *",
                 form_email: "ኢሜይል *",
                 form_phone: "ስልክ",
-                form_service: "ፍላጎት ያለዎት አገልግሎት",
+                form_service: "ፍላጎት ያለበት አገልግሎት",
                 form_select: "አገልግሎት ይምረጡ",
                 form_message: "መልእክት *",
                 form_submit: "መልእክት ይላኩ",
                 loading: "በመላክ ላይ...",
-                success: "መልእክቱ በተሳ�� ��ኔታ ተልኳል! በቅርቡ እናገኝዎታለን።",
+                success: "መልእክቱ በተሳካ ሁኔታ ተልኳል! በቅርቡ እናገኝዎታለን።",
                 footer_text: "© 2024 ኢስት ግሪን ቢዝነስ። ሁሉም መብቶች የተጠበቁ ናቸው።",
                 footer_location: "📍 አዲስ አበባ፣ ኢትዮጵያ 🇪🇹"
             },
@@ -1244,5 +1278,5 @@
 
         initializeApp();
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b7c5866f3a38a61',t:'MTc2NzM3ODgxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b7cea4887541b5a',t:'MTc2NzM4NDc4Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
