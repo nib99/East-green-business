@@ -1,0 +1,1248 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>East Green Business - Your Trusted Business Partner in Ethiopia</title>
+  <meta name="description" content="East Green Business - Professional business services in Addis Ababa, Ethiopia. Contact Manager AMIYYE ABDURAHIM at +251921153335">
+  <meta name="keywords" content="East Green Business, Ethiopia business, Addis Ababa, Merkato, business services, Jimmaa, Harargee">
+  <script src="/_sdk/data_sdk.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .main-wrapper {
+            width: 100%;
+            min-height: 100%;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+            overflow-y: auto;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.95) 0%, rgba(16, 185, 129, 0.95) 100%);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .logo-section h1 {
+            color: #ffffff;
+            font-size: 1.75rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            letter-spacing: 0.5px;
+        }
+        
+        .logo-section p {
+            color: #f0fdf4;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .nav-controls {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .lang-switcher {
+            position: relative;
+        }
+        
+        .lang-btn {
+            padding: 0.65rem 1.5rem;
+            border: 2px solid #ffffff;
+            background: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            border-radius: 2rem;
+            font-weight: 700;
+            transition: all 0.3s;
+            color: #ffffff;
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 0.5rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            padding: 0.5rem;
+            min-width: 180px;
+            display: none;
+            z-index: 1000;
+        }
+        
+        .lang-dropdown.active {
+            display: block;
+        }
+        
+        .lang-option {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .lang-option:hover {
+            background: #f0fdf4;
+            color: #059669;
+        }
+        
+        .lang-option.selected {
+            background: #dcfce7;
+            color: #059669;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: #ffffff;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        
+        .hero {
+            padding: 6rem 2rem;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 30%, #7e22ce 70%, #9333ea 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100px); }
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            font-weight: 900;
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1.25rem 3rem;
+            border: none;
+            border-radius: 3rem;
+            font-size: 1.125rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #047857 0%, #059669 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.5);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+            color: #059669;
+            border: 3px solid #ffffff;
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+        }
+        
+        .section {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            margin: 2rem;
+            padding: 4rem 2rem;
+            border-radius: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid #f3f4f6;
+        }
+        
+        .section-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.75rem;
+            color: #1f2937;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, #059669 0%, #10b981 100%);
+            border-radius: 3px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            padding: 3rem 2rem;
+            border-radius: 1.5rem;
+            text-align: center;
+            transition: all 0.4s;
+            border: 3px solid #10b981;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(5, 150, 105, 0.3);
+            border-color: #059669;
+        }
+        
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        .service-card h3 {
+            color: #047857;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+        
+        .service-card p {
+            color: #065f46;
+            line-height: 1.8;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+        
+        .manager-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fcd34d 100%);
+            padding: 3rem;
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            border: 3px solid #f59e0b;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+        }
+        
+        .manager-avatar {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            border: 5px solid #ffffff;
+        }
+        
+        .manager-info {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        .manager-info h3 {
+            color: #78350f;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+        }
+        
+        .manager-detail {
+            color: #92400e;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 0.75rem 1.25rem;
+            border-radius: 1rem;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        .map-container {
+            margin-top: 2rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 3px solid #3b82f6;
+        }
+        
+        .map-wrapper {
+            width: 100%;
+            height: 450px;
+            position: relative;
+        }
+        
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .map-info {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            padding: 1.5rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .map-info-text {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .map-info-icon {
+            font-size: 2rem;
+        }
+        
+        .map-directions-btn {
+            padding: 0.75rem 1.5rem;
+            background: white;
+            color: #2563eb;
+            border: none;
+            border-radius: 2rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .map-directions-btn:hover {
+            background: #f0f9ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+            font-weight: 800;
+            font-size: 1.05rem;
+            letter-spacing: 0.3px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 3px solid #e5e7eb;
+            border-radius: 1rem;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-weight: 600;
+            background: #ffffff;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #059669;
+            box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .floating-contact {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 1000;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+        
+        .telegram-btn {
+            background: #0088cc;
+            color: white;
+        }
+        
+        .footer {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 2rem;
+            text-align: center;
+            color: #6b7280;
+        }
+        
+        .success-message {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 1rem;
+            color: #059669;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .logo-section h1 {
+                font-size: 1.5rem;
+            }
+            
+            .nav-controls {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                gap: 0.75rem;
+                width: 100%;
+            }
+            
+            .nav-link {
+                display: block;
+                padding: 0.75rem;
+                background: rgba(255, 255, 255, 0.1);
+                text-align: center;
+            }
+            
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                padding: 1rem 2rem;
+            }
+            
+            .section {
+                margin: 1rem;
+                padding: 2rem 1.5rem;
+                border-radius: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .manager-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+            
+            .manager-avatar {
+                width: 120px;
+                height: 120px;
+                font-size: 3rem;
+            }
+            
+            .manager-info {
+                width: 100%;
+            }
+            
+            .manager-info h3 {
+                font-size: 1.5rem;
+            }
+            
+            .manager-detail {
+                font-size: 1rem;
+                justify-content: center;
+            }
+            
+            .floating-contact {
+                bottom: 1rem;
+                right: 1rem;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+            
+            .contact-form {
+                padding: 0;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .map-wrapper {
+                height: 300px;
+            }
+            
+            .map-info {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .map-info-text {
+                font-size: 1rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .map-directions-btn {
+                width: 100%;
+                padding: 1rem 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .service-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .service-card h3 {
+                font-size: 1.25rem;
+            }
+            
+            .lang-dropdown {
+                left: 0;
+                right: auto;
+                width: 100%;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="main-wrapper">
+   <header class="header">
+    <div class="header-content">
+     <div class="logo-section">
+      <h1 id="site-title">🌿 East Green Business</h1>
+      <p id="tagline">Your Trusted Business Partner</p>
+     </div>
+     <div class="nav-controls">
+      <div class="lang-switcher"><button class="lang-btn" id="lang-toggle"> 🌐 <span id="current-lang">English</span> ▼ </button>
+       <div class="lang-dropdown" id="lang-dropdown">
+        <div class="lang-option" data-lang="en" data-name="English">
+         🇺🇸 English
+        </div>
+        <div class="lang-option" data-lang="am" data-name="አማርኛ">
+         🇪🇹 አማርኛ
+        </div>
+        <div class="lang-option" data-lang="om" data-name="Afaan Oromo">
+         🇪🇹 Afaan Oromo
+        </div>
+       </div>
+      </div>
+      <nav>
+       <ul class="nav-menu">
+        <li><a href="#home" class="nav-link" data-i18n="nav_home">Home</a></li>
+        <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+       </ul>
+      </nav>
+     </div>
+    </div>
+   </header>
+   <section class="hero" id="home">
+    <div class="hero-content">
+     <h2 data-i18n="hero_title">Welcome to East Green Business</h2>
+     <p data-i18n="hero_subtitle">Professional business services in Addis Ababa, Ethiopia 🇪🇹</p>
+     <div class="cta-buttons"><a href="#contact" class="btn btn-primary" data-i18n="cta_contact">Contact Us</a> <a href="#services" class="btn btn-secondary" data-i18n="cta_services">Our Services</a>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="services">
+    <div class="section-content">
+     <h2 class="section-title" data-i18n="services_title">Our Services</h2>
+     <div class="services-grid">
+      <div class="service-card">
+       <div class="service-icon">
+        💼
+       </div>
+       <h3 data-i18n="service1_title">Business Consulting</h3>
+       <p data-i18n="service1_desc">Expert guidance for your business growth and development</p>
+      </div>
+      <div class="service-card">
+       <div class="service-icon">
+        🤝
+       </div>
+       <h3 data-i18n="service2_title">Partnership Solutions</h3>
+       <p data-i18n="service2_desc">Building strong business relationships across Ethiopia</p>
+      </div>
+      <div class="service-card">
+       <div class="service-icon">
+        📊
+       </div>
+       <h3 data-i18n="service3_title">Market Analysis</h3>
+       <p data-i18n="service3_desc">In-depth market research and strategic planning</p>
+      </div>
+      <div class="service-card">
+       <div class="service-icon">
+        🌱
+       </div>
+       <h3 data-i18n="service4_title">Sustainable Growth</h3>
+       <p data-i18n="service4_desc">Eco-friendly business solutions for long-term success</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="about">
+    <div class="section-content">
+     <h2 class="section-title" data-i18n="about_title">Meet Our Manager</h2>
+     <div class="manager-section">
+      <div class="manager-avatar">
+       👨‍💼
+      </div>
+      <div class="manager-info">
+       <h3 id="manager-name">AMIYYE ABDURAHIM</h3>
+       <p class="manager-detail">📱 <span data-i18n="manager_phone">Phone:</span> <span id="manager-phone">+251921153335</span></p>
+       <p class="manager-detail">📍 <span data-i18n="manager_location">Location:</span> Finfinnee (Addis Ababa), Ethiopia 🇪🇹</p>
+       <p class="manager-detail">🏢 <span data-i18n="manager_office">Office:</span> Merkato - Abdo Berand</p>
+      </div>
+     </div>
+     <h3 class="section-title" style="margin-top: 3rem;" data-i18n="gallery_title">Photo Gallery</h3>
+     <div class="gallery-grid">
+      <div class="gallery-item">
+       🏢
+      </div>
+      <div class="gallery-item">
+       🌄
+      </div>
+      <div class="gallery-item">
+       🤝
+      </div>
+      <div class="gallery-item">
+       📸
+      </div>
+      <div class="gallery-item">
+       🌿
+      </div>
+      <div class="gallery-item">
+       💼
+      </div>
+     </div>
+     <div class="map-container">
+      <div class="map-wrapper"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5446824719894!2d38.74617731477975!3d9.015073893498783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85a57f34c5c9%3A0x6e7e6e7e6e7e6e7e!2sMerkato%2C%20Addis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="East Green Business Location - Merkato, Addis Ababa"> </iframe>
+      </div>
+      <div class="map-info">
+       <div class="map-info-text"><span class="map-info-icon">📍</span>
+        <div>
+         <div data-i18n="map_location">
+          Addis Ababa - Merkato (Abdo Berand)
+         </div>
+         <div style="font-size: 0.9rem; opacity: 0.95; font-weight: 600;">
+          Finfinnee, Itoophiyaa 🇪🇹
+         </div>
+        </div>
+       </div><a href="https://www.google.com/maps/search/?api=1&amp;query=Merkato+Addis+Ababa+Ethiopia" target="_blank" rel="noopener noreferrer" class="map-directions-btn"> 🧭 <span data-i18n="get_directions">Get Directions</span> </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="contact">
+    <div class="section-content">
+     <h2 class="section-title" data-i18n="contact_title">Contact Us</h2>
+     <div id="success-message" class="success-message"></div>
+     <div id="loading-spinner" class="loading-spinner">
+      ⏳ <span data-i18n="loading">Sending...</span>
+     </div>
+     <form class="contact-form" id="contact-form">
+      <div class="form-group"><label for="name" data-i18n="form_name">Name *</label> <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group"><label for="email" data-i18n="form_email">Email *</label> <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group"><label for="phone" data-i18n="form_phone">Phone</label> <input type="tel" id="phone" name="phone">
+      </div>
+      <div class="form-group"><label for="service" data-i18n="form_service">Service Interested In</label> <select id="service" name="service"> <option value="" data-i18n="form_select">Select a service</option> <option value="consulting" data-i18n="service1_title">Business Consulting</option> <option value="partnership" data-i18n="service2_title">Partnership Solutions</option> <option value="analysis" data-i18n="service3_title">Market Analysis</option> <option value="growth" data-i18n="service4_title">Sustainable Growth</option> </select>
+      </div>
+      <div class="form-group"><label for="message" data-i18n="form_message">Message *</label> <textarea id="message" name="message" required></textarea>
+      </div><button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="form_submit">Send Message</button>
+     </form>
+    </div>
+   </section>
+   <footer class="footer">
+    <p data-i18n="footer_text">© 2024 East Green Business. All rights reserved.</p>
+    <p data-i18n="footer_location">📍 Addis Ababa, Ethiopia 🇪🇹</p>
+   </footer>
+   <div class="floating-contact"><a href="#" class="floating-btn whatsapp-btn" id="whatsapp-link" target="_blank" rel="noopener noreferrer">💬</a> <a href="#" class="floating-btn telegram-btn" id="telegram-link" target="_blank" rel="noopener noreferrer">✈️</a>
+   </div>
+  </div>
+  <script>
+        const defaultConfig = {
+            site_title: "🌿 East Green Business",
+            tagline_en: "Your Trusted Business Partner",
+            tagline_am: "የታመነ የንግድ አጋርዎ",
+            tagline_om: "Hiriyaa Daldalaa Amanamaa",
+            manager_name: "AMIYYE ABDURAHIM",
+            manager_phone: "+251921153335",
+            whatsapp_number: "251921153335",
+            telegram_username: "eastgreenbiz"
+        };
+
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_services: "Services",
+                nav_about: "About",
+                nav_contact: "Contact",
+                hero_title: "Welcome to East Green Business",
+                hero_subtitle: "Professional business services in Addis Ababa, Ethiopia 🇪🇹",
+                cta_contact: "Contact Us",
+                cta_services: "Our Services",
+                services_title: "Our Services",
+                service1_title: "Business Consulting",
+                service1_desc: "Expert guidance for your business growth and development",
+                service2_title: "Partnership Solutions",
+                service2_desc: "Building strong business relationships across Ethiopia",
+                service3_title: "Market Analysis",
+                service3_desc: "In-depth market research and strategic planning",
+                service4_title: "Sustainable Growth",
+                service4_desc: "Eco-friendly business solutions for long-term success",
+                about_title: "Meet Our Manager",
+                manager_phone: "Phone:",
+                manager_location: "Location:",
+                manager_office: "Office:",
+                gallery_title: "Photo Gallery",
+                map_location: "Addis Ababa - Merkato (Abdo Berand)",
+                get_directions: "Get Directions",
+                contact_title: "Contact Us",
+                form_name: "Name *",
+                form_email: "Email *",
+                form_phone: "Phone",
+                form_service: "Service Interested In",
+                form_select: "Select a service",
+                form_message: "Message *",
+                form_submit: "Send Message",
+                loading: "Sending...",
+                success: "Message sent successfully! We'll contact you soon.",
+                footer_text: "© 2024 East Green Business. All rights reserved.",
+                footer_location: "📍 Addis Ababa, Ethiopia 🇪🇹"
+            },
+            am: {
+                nav_home: "መነሻ",
+                nav_services: "አገልግሎቶች",
+                nav_about: "ስለእኛ",
+                nav_contact: "ያግኙን",
+                hero_title: "ወደ ኢስት ግሪን ቢዝነስ እንኳን በደህና መጡ",
+                hero_subtitle: "በአዲስ አበ���፣ ኢትዮጵያ ውስጥ ሙያዊ የንግድ አገልግሎቶች 🇪🇹",
+                cta_contact: "ያግኙን",
+                cta_services: "አገልግሎቶቻችን",
+                services_title: "አገልግሎቶቻችን",
+                service1_title: "የንግድ አማካሪነት",
+                service1_desc: "ለንግድዎ እድገት እና ልማት ባለሙያ መመሪያ",
+                service2_title: "የአጋርነት መፍትሄዎች",
+                service2_desc: "በመላ ኢትዮጵያ ጠንካራ የንግድ ግንኙነቶችን መገንባት",
+                service3_title: "የገበያ ትንተና",
+                service3_desc: "ጥልቅ የገበያ ምርምር እና ስትራቴጂካዊ እቅድ",
+                service4_title: "ዘላቂ እድገት",
+                service4_desc: "ለረጅም ጊዜ ስኬት ለአካባቢ ተስማሚ የንግድ መፍትሄዎች",
+                about_title: "አስተዳዳሪያችንን ያግኙ",
+                manager_phone: "ስልክ:",
+                manager_location: "አድራሻ:",
+                manager_office: "ቢሮ:",
+                gallery_title: "የፎቶ ማዕከለ",
+                map_location: "አዲስ አበባ - መርካቶ (አብዶ በራንድ)",
+                get_directions: "መመሪያ ያግኙ",
+                contact_title: "ያግኙን",
+                form_name: "ስም *",
+                form_email: "ኢሜይል *",
+                form_phone: "ስልክ",
+                form_service: "ፍላጎት ያለዎት አገልግሎት",
+                form_select: "አገልግሎት ይምረጡ",
+                form_message: "መልእክት *",
+                form_submit: "መልእክት ይላኩ",
+                loading: "በመላክ ላይ...",
+                success: "መልእክቱ በተሳ�� ��ኔታ ተልኳል! በቅርቡ እናገኝዎታለን።",
+                footer_text: "© 2024 ኢስት ግሪን ቢዝነስ። ሁሉም መብቶች የተጠበቁ ናቸው።",
+                footer_location: "📍 አዲስ አበባ፣ ኢትዮጵያ 🇪🇹"
+            },
+            om: {
+                nav_home: "Fuula Dura",
+                nav_services: "Tajaajilawwan",
+                nav_about: "Waa'ee Keenya",
+                nav_contact: "Nu Quunnamaa",
+                hero_title: "Gara East Green Business Baga Dhuftan",
+                hero_subtitle: "Tajaajila daldalaa ogeessa Finfinnee, Itoophiyaa keessaa 🇪🇹",
+                cta_contact: "Nu Quunnamaa",
+                cta_services: "Tajaajilawwan Keenya",
+                services_title: "Tajaajilawwan Keenya",
+                service1_title: "Gorsaa Daldala",
+                service1_desc: "Qajeelfama ogeessa guddina fi misooma daldala keessaniif",
+                service2_title: "Furmaata Hiriyyummaa",
+                service2_desc: "Walitti dhufeenya daldala cimaa guutuu Itoophiyaa irratti ijaaruu",
+                service3_title: "Xiinxala Gabaa",
+                service3_desc: "Qorannoo gabaa gadi fageenya qabuu fi karoora tarsiimoo",
+                service4_title: "Guddina Itti Fufiinsa Qabu",
+                service4_desc: "Furmaatota daldala naannoodhaaf mijatoo milkaa'ina yeroo dheeraaf",
+                about_title: "Hoogganaa Keenya Wajjin Walargadhaa",
+                manager_phone: "Bilbila:",
+                manager_location: "Bakka:",
+                manager_office: "Waajjira:",
+                gallery_title: "Mana Suuraa",
+                map_location: "Finfinnee - Markatoo (Abdo Berand)",
+                get_directions: "Qajeelfama Argadhaa",
+                contact_title: "Nu Quunnamaa",
+                form_name: "Maqaa *",
+                form_email: "Email *",
+                form_phone: "Bilbila",
+                form_service: "Tajaajila Barbaaddan",
+                form_select: "Tajaajila filadhaa",
+                form_message: "Ergaa *",
+                form_submit: "Ergaa Ergaa",
+                loading: "Ergamaa jira...",
+                success: "Ergaan milkaa'inaan ergameera! Yeroo dhiyootti isin qunnamnaa.",
+                footer_text: "© 2024 East Green Business. Mirgawwan hundi eegamaniiru.",
+                footer_location: "📍 Finfinnee, Itoophiyaa 🇪🇹"
+            }
+        };
+
+        let currentLang = 'en';
+        let currentData = [];
+
+        const dataHandler = {
+            onDataChanged(data) {
+                currentData = data;
+            }
+        };
+
+        async function initializeApp() {
+            const initResult = await window.dataSdk.init(dataHandler);
+            if (!initResult.isOk) {
+                console.error("Failed to initialize Data SDK");
+            }
+
+            if (window.elementSdk) {
+                await window.elementSdk.init({
+                    defaultConfig,
+                    onConfigChange: async (config) => {
+                        const siteTitle = config.site_title || defaultConfig.site_title;
+                        const managerName = config.manager_name || defaultConfig.manager_name;
+                        const managerPhone = config.manager_phone || defaultConfig.manager_phone;
+                        const whatsappNumber = config.whatsapp_number || defaultConfig.whatsapp_number;
+                        const telegramUsername = config.telegram_username || defaultConfig.telegram_username;
+                        
+                        document.getElementById('site-title').textContent = siteTitle;
+                        document.getElementById('manager-name').textContent = managerName;
+                        document.getElementById('manager-phone').textContent = managerPhone;
+                        
+                        const whatsappLink = document.getElementById('whatsapp-link');
+                        const telegramLink = document.getElementById('telegram-link');
+                        whatsappLink.href = `https://wa.me/${whatsappNumber}`;
+                        telegramLink.href = `https://t.me/${telegramUsername}`;
+                        
+                        updateTagline(config);
+                    },
+                    mapToCapabilities: (config) => ({
+                        recolorables: [],
+                        borderables: [],
+                        fontEditable: undefined,
+                        fontSizeable: undefined
+                    }),
+                    mapToEditPanelValues: (config) => new Map([
+                        ["site_title", config.site_title || defaultConfig.site_title],
+                        ["tagline_en", config.tagline_en || defaultConfig.tagline_en],
+                        ["tagline_am", config.tagline_am || defaultConfig.tagline_am],
+                        ["tagline_om", config.tagline_om || defaultConfig.tagline_om],
+                        ["manager_name", config.manager_name || defaultConfig.manager_name],
+                        ["manager_phone", config.manager_phone || defaultConfig.manager_phone],
+                        ["whatsapp_number", config.whatsapp_number || defaultConfig.whatsapp_number],
+                        ["telegram_username", config.telegram_username || defaultConfig.telegram_username]
+                    ])
+                });
+            }
+
+            setupEventListeners();
+            updateLanguage('en');
+        }
+
+        function updateTagline(config) {
+            const taglineElement = document.getElementById('tagline');
+            let taglineText = defaultConfig.tagline_en;
+            
+            if (currentLang === 'en') {
+                taglineText = config.tagline_en || defaultConfig.tagline_en;
+            } else if (currentLang === 'am') {
+                taglineText = config.tagline_am || defaultConfig.tagline_am;
+            } else if (currentLang === 'om') {
+                taglineText = config.tagline_om || defaultConfig.tagline_om;
+            }
+            
+            taglineElement.textContent = taglineText;
+        }
+
+        function setupEventListeners() {
+            const langToggle = document.getElementById('lang-toggle');
+            const langDropdown = document.getElementById('lang-dropdown');
+            const langOptions = document.querySelectorAll('.lang-option');
+            
+            langToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langDropdown.classList.toggle('active');
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                    langDropdown.classList.remove('active');
+                }
+            });
+            
+            langOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const lang = option.dataset.lang;
+                    const langName = option.dataset.name;
+                    updateLanguage(lang);
+                    document.getElementById('current-lang').textContent = langName;
+                    langDropdown.classList.remove('active');
+                    
+                    langOptions.forEach(opt => opt.classList.remove('selected'));
+                    option.classList.add('selected');
+                });
+            });
+
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                await handleFormSubmit(e);
+            });
+
+            const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
+            const whatsappNumber = config.whatsapp_number || defaultConfig.whatsapp_number;
+            const telegramUsername = config.telegram_username || defaultConfig.telegram_username;
+            
+            const whatsappLink = document.getElementById('whatsapp-link');
+            const telegramLink = document.getElementById('telegram-link');
+            whatsappLink.href = `https://wa.me/${whatsappNumber}`;
+            telegramLink.href = `https://t.me/${telegramUsername}`;
+        }
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.dataset.i18n;
+                if (translations[lang] && translations[lang][key]) {
+                    if (el.tagName === 'INPUT' && el.placeholder !== undefined) {
+                        el.placeholder = translations[lang][key];
+                    } else if (el.tagName === 'OPTION') {
+                        el.textContent = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            if (window.elementSdk) {
+                updateTagline(window.elementSdk.config);
+            } else {
+                updateTagline(defaultConfig);
+            }
+        }
+
+        async function handleFormSubmit(e) {
+            const formData = new FormData(e.target);
+            const data = {
+                id: Date.now().toString(),
+                type: 'contact',
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone') || '',
+                service: formData.get('service') || '',
+                message: formData.get('message'),
+                created_at: new Date().toISOString()
+            };
+
+            if (currentData.length >= 999) {
+                const successMsg = document.getElementById('success-message');
+                successMsg.textContent = translations[currentLang].limit_reached || 'Maximum limit of 999 submissions reached. Please contact us directly.';
+                successMsg.style.background = '#fef2f2';
+                successMsg.style.color = '#991b1b';
+                successMsg.style.display = 'block';
+                return;
+            }
+
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            
+            loadingSpinner.style.display = 'block';
+            submitButton.disabled = true;
+
+            const result = await window.dataSdk.create(data);
+
+            loadingSpinner.style.display = 'none';
+            submitButton.disabled = false;
+
+            const successMsg = document.getElementById('success-message');
+            if (result.isOk) {
+                successMsg.textContent = translations[currentLang].success;
+                successMsg.style.background = '#d1fae5';
+                successMsg.style.color = '#065f46';
+                successMsg.style.display = 'block';
+                e.target.reset();
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 5000);
+            } else {
+                successMsg.textContent = 'Error sending message. Please try again.';
+                successMsg.style.background = '#fef2f2';
+                successMsg.style.color = '#991b1b';
+                successMsg.style.display = 'block';
+            }
+        }
+
+        initializeApp();
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b7c5866f3a38a61',t:'MTc2NzM3ODgxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
